@@ -1,7 +1,16 @@
+using System.Collections.Generic;
+
 namespace Store
 {
   public class Vendor
   {
-    // properties, constructors, methods, etc. go here
+    // public string VendorName { get; set; }
+    // public string VendorDescription { get; set; }
+
+    // public Vendor(string name, string description)
+    // {
+    //   VendorDescription = description;
+
+    // }
   }
 }
