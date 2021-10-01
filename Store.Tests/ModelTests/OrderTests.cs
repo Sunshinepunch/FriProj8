@@ -11,27 +11,39 @@ namespace Store.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-    Order newOrder = new Order("test", "placeholder2");
+    Order newOrder = new Order("test", "placeholder2", 4);
     Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
     [TestMethod]
-    public void CreateName_CreatesOrderWithName_String()
+    public void CreateTitle_CreatesOrderWithTitle_String()
     {
-    string name ="12 pies";
+    string title ="12 pies";
     string description = "13 apple pies";
-    Order newOrder = new Order(name, description);
-    string result = newOrder.OrderName;
-    Assert.AreEqual(name, result);
+    int price = 4;
+    Order newOrder = new Order(title, description, price);
+    string result = newOrder.OrderTitle;
+    Assert.AreEqual(title, result);
     }
     [TestMethod]
-    public void CreateName_CreatesOrderWithDescription_String()
+    public void CreateDescrip_CreatesOrderWithDescription_String()
     {
-    string name ="12 pies";
+    string title ="12 pies";
     string description = "apple";
-    Order newOrder = new Order(name, description);
+    int price = 4;
+    Order newOrder = new Order(title, description, price);
     string result = newOrder.OrderDescription;
     Assert.AreEqual(description, result);
+    }
+    [TestMethod]
+    public void CreatePrice_CreatesOrderWithPrice_Int()
+    {
+    string title ="12 pies";
+    string description = "apple";
+    int price = 12;
+    Order newOrder = new Order(title, description, price);
+    int result = newOrder.OrderPrice;
+    Assert.AreEqual(price, result);
     }
   }
 }
