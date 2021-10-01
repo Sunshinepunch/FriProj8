@@ -1,6 +1,6 @@
-namespace ProjectName
+namespace Store
 {
-  public class ClassName
+  public class Vendor
   {
     // properties, constructors, methods, etc. go here
   }
