@@ -11,7 +11,7 @@ namespace Store.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-    Order newOrder = new Order("test", "placeholder2", 4);
+    Order newOrder = new Order("test", "placeholder2", 4, "test");
     Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -21,7 +21,8 @@ namespace Store.Tests
     string title ="12 pies";
     string description = "13 apple pies";
     int price = 4;
-    Order newOrder = new Order(title, description, price);
+    string duedate = "test";
+    Order newOrder = new Order(title, description, price, duedate);
     string result = newOrder.OrderTitle;
     Assert.AreEqual(title, result);
     }
@@ -31,7 +32,8 @@ namespace Store.Tests
     string title ="12 pies";
     string description = "apple";
     int price = 4;
-    Order newOrder = new Order(title, description, price);
+    string duedate = "test";
+    Order newOrder = new Order(title, description, price, duedate);
     string result = newOrder.OrderDescription;
     Assert.AreEqual(description, result);
     }
@@ -41,9 +43,21 @@ namespace Store.Tests
     string title ="12 pies";
     string description = "apple";
     int price = 12;
-    Order newOrder = new Order(title, description, price);
+    string duedate = "test";
+    Order newOrder = new Order(title, description, price, duedate);
     int result = newOrder.OrderPrice;
     Assert.AreEqual(price, result);
+    }
+    [TestMethod]
+    public void CreateDate_CreatesOrderWithDate_String()
+    {
+    string title ="12 pies";
+    string description = "apple";
+    int price = 12;
+    string duedate = "March 8th 2022";
+    Order newOrder = new Order(title, description, price, duedate);
+    string result = newOrder.OrderDate;
+    Assert.AreEqual(duedate, result);
     }
   }
 }
