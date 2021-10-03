@@ -1,7 +1,14 @@
-<h1>To Do List Item Details: </h1>
+@using Store;
 
-<h2>@Model["CLASS"]</h2>
+<h3>Here are all the orders for this vendor:</h3>
 
-change pathing below and do other stuff
-<a href='/categories/@Model["category"].Id/items/new'>Add another item</a>
-<a href='/categories'>View all categories</a>
+<ol>
+@foreach (Order order in @Model["orders"])
+{
+  <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.OrderDescription</a></li>
+}
+</ol>
+
+<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
+<p><a href='/vendors'>Return to vendor list</a></p>
+<p><a href='/'>Return to Home Page</a></p>
