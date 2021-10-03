@@ -38,7 +38,7 @@ namespace Store.Controllers
       return View(model);
     }
 
-    [HttpPost("/vendors/{vendorId}/orders ")]
+    [HttpPost("/vendors/{vendorId}/orders")]
     public ActionResult Create(int vendorId, string OrderTitle, string OrderDescription, int OrderPrice, string OrderDate)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
