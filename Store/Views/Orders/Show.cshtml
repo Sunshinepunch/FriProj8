@@ -1,8 +1,11 @@
 <h1>Current Vendor Order Details: </h1>
 
-<h2>@Model["order"].OrderDescription</h2>
 
-<h3>Category: @Model["vendor"].OrderTitle</h3>
+
+<h3>Order: @Model["vendor"].OrderTitle</h3>
+
+<h2>@Model["order"].OrderDescription</h2>
+<h2>@Model["order"].OrderDate</h2>
 
 <a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
 <br>
