@@ -9,14 +9,15 @@
 
 *_C#_
 *_.NET Framework_
+*_MsTest_
 
 
 ## Setup/Installation Requirements
 Download the repo and commence the following:
 
-For Testing: You will need to run dotnet build out of the Store.Tests directory followed by dotnet test when seeking to test functionality within the program - all current functions have passed testing!
+For Testing: You will need to run `dotnet build` out of the Store.Tests directory followed by `dotnet test` when seeking to test functionality within the program - all current functions have passed testing!
 
-For Running: Navigate to the store directory and open a command prompt then execute dotnet run. Then open a browser and navigate to the localhost port specified in your command prompt. From there, simply utilize the functionality of the app to add vendors, view a list of vendors, add orders with due dates, and remove any of the above!
+For Running: Navigate to the store directory and open a command prompt then execute `dotnet run`. Then open a browser and navigate to the localhost port specified in your command prompt. From there, simply utilize the functionality of the app to add vendors, view a list of vendors, add orders with due dates, and remove any of the above!
 
 ## Known Bugs
 * _Email if you find any!_
